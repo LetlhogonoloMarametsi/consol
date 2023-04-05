@@ -2,6 +2,7 @@ from django.views.generic import ListView, DetailView
 from django.urls import path
 from .models import Post
 
+# Urls for blog pages 
 # Insert blog app urls patterns here
 urlpatterns = [
     path('', ListView.as_view(
