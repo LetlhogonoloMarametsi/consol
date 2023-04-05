@@ -1,6 +1,7 @@
 from django.urls import path
 from .import views
 
+# Here we set up urls for authentication.
 # Adding urls for user authentication here
 app_name = 'user_auth'
 urlpatterns = [
