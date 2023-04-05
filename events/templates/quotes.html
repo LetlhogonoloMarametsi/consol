@@ -1,0 +1,17 @@
+{% extends "header.html" %}
+
+{% block content %}
+    <h3><a href="/events/{{post.id}}">{{ post.title }}</a></h3>
+    <h6>{{ post.Venue }}</h6>
+    <h6>{{ post.Date }}</h6>
+    <h6>{{ post.Time }}</h6>
+    <h6>{{ post.Ticket }}</h6>
+    <h6>{{ post.signature }}</h6>
+    <div class = "container">
+       Venue: {{ post.venue|safe|linebreaks}}
+       Date: {{ post.date|safe|linebreaks}}
+       Time: {{ post.time|safe|linebreaks}}
+       Tickets: {{ post.ticket|safe|linebreaks}}
+    </div>
+    <br><br>
+{% endblock %}

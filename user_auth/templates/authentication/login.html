@@ -1,0 +1,20 @@
+{% extends "header.html" %}
+
+{% block content %}
+<h1 style="color: white; font-family:verdana;"> Login as User</h1>
+
+<form action="{% url 'user_auth:authenticate_user' %}" method="post">
+    {% csrf_token %}
+
+    <label style="color: white; font-family:verdana;">Username</label>
+    <input type="text" name="username" placeholder="User" required>
+    <br/><br/>
+
+    <label style="color: white; font-family:verdana;">Password</label>
+    <input type="password" name="password" required>
+
+    <input type="submit" value="Login">
+
+</form>
+
+{% endblock %}

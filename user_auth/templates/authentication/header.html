@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body style="background-image:url('{% static 'stage.jpg'%}'); background-size: cover; box-shadow: inset 0 0 0 2048px
+rgba(0, 0, 0, 0.40); height: 100vh;">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Loud Musiq Entertainment</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/user_auth/">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/blog/">Articles</a>
+                            </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="/events/">Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact_us/">Contact us</a>
+                            </li>
+                               <li class="nav-item">
+                                <a class="nav-link" href="/">Home Page</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {% block content %}
+
+            {% endblock %}
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
