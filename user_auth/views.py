@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
-
+# Here is where we set up our views for landing pages and extends plus models.
 # Create your views here.
 
 def login_user(request):
